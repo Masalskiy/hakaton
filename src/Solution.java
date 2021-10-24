@@ -14,7 +14,7 @@ public class Solution {
 //        }
 
         Algorithm algorithm = new Algorithm();
-        //algorithm.dfc(1L);
+        algorithm.dfs(14L);
         //после этой штуки нужно построить обратный маршрут
 
         System.out.println();
