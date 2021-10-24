@@ -1,14 +1,15 @@
-import java.util.Map;
-import java.util.PriorityQueue;
-import java.util.Queue;
-import java.util.Stack;
+import java.util.*;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class Algorithm {
     //не забыть сбросить флаги
     private final Stack<Long> stack = new Stack<>();
-    //private final Queue<Long> queue = new PriorityQueue<>();//в очередь добавление по порядку
+    //private final Queue<Long> queue = new PriorityQueue<>();//добавление в очередь по порядку
     private final Queue<Long> queue = new ConcurrentLinkedQueue<>();
+
+    private final int INFINITY = 100000000; // это число у нас будет служить в качестве "бесконечности"
+    private int countOfVertexInTree; // количество рассмотренных вершин в дереве
+    private List<Long> shortestPaths = new ArrayList<>(); // список данных кратчайших путей
 
     public void dfs(Long startWith) { // обход в глубину
         AllPoints.getInstance().getPointByName(startWith).visit();//берем первую вершину

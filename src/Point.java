@@ -7,6 +7,7 @@ import java.util.Map;
 import java.util.Set;
 
 public class Point {
+    private Integer distance = Integer.MAX_VALUE;
     private static long id = 0;
     private final double latitude;
     private final double longitude;//долгота
@@ -40,6 +41,14 @@ public class Point {
     }
     public void resetVisit(){
         isVisited = false;
+    }
+
+    public Integer getDistance() {
+        return distance;
+    }
+
+    public void setDistance(Integer distance) {
+        this.distance = distance;
     }
 
     public double getLatitude() {
